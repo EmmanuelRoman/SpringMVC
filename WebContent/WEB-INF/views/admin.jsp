@@ -14,6 +14,10 @@
 		action="${pageContext.request.contextPath}/admin/save">
 		<table>
 			<tr>
+				<td>Estado :</td>
+				<td><input type="text" name="estado"/></td>
+			</tr>
+			<tr>
 				<td>Nombre :</td>
 				<td><form:input path="nombre" type="text" /></td>
 			</tr>
