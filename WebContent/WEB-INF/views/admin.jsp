@@ -5,14 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Página de Inicio</title>
+<title>Página Administrador</title>
 </head>
 <body>
-	<h1>Página de Inicio</h1>
-	<ul>
-		<li><a href="<c:url value='/about'/>"> Acerca de... </a></li>
-		<li><a href="<c:url value='/admin'/>"> Página Administrador </a></li>
-	</ul>
+	<h1>admin.jsp</h1>
 	<c:out value="${mensaje}" />
 	<br>
 	<c:out value="${sessionScope.resultado}" />
