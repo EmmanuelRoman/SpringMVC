@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Página de Inicio</title>
+<title>Página About</title>
 </head>
 <body>
-	<h1>Página de Inicio</h1>
+	<h1>about.jsp</h1>
 </body>
 </html>
