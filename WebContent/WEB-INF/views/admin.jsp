@@ -10,7 +10,8 @@
 </head>
 <body>
 	<h1>admin.jsp</h1>
-	<form:form commandName="admin" method="post" action="${pageContext.request.contextPath}/admin/save">
+	<form:form commandName="admin" method="post"
+		action="${pageContext.request.contextPath}/admin/save">
 		<table>
 			<tr>
 				<td>Nombre :</td>
@@ -21,7 +22,7 @@
 				<td><form:input path="cargo" type="text" /></td>
 			</tr>
 			<tr>
-			<td><input type="submit" value="Guardar" /></td>
+				<td><input type="submit" value="Guardar Datos" /></td>
 			</tr>
 		</table>
 	</form:form>

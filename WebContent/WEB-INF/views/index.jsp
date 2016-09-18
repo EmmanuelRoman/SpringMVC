@@ -10,11 +10,10 @@
 <body>
 	<h1>Página de Inicio</h1>
 	<ul>
-		<li><a href="<c:url value='/about'/>"> Acerca de... </a></li>
-		<li><a href="<c:url value='/admin'/>"> Página Administrador </a></li>
+		<li><a href="<c:url value='/about'/>">Acerca de... </a></li>
+		<li><a href="<c:url value='/admin'/>">Página Administrador </a></li>
 	</ul>
-	<c:out value="${mensaje}" />
 	<br>
-	<c:out value="${sessionScope.resultado}" />
+	<c:out value="${adminForm}" />
 </body>
 </html>
