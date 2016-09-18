@@ -22,9 +22,12 @@
 				<td><form:input path="cargo" type="text" /></td>
 			</tr>
 			<tr>
+				<td></td>
 				<td><input type="submit" value="Guardar Datos" /></td>
 			</tr>
 		</table>
 	</form:form>
+	<br>
+	<c:out value="${resultado}" />
 </body>
 </html>

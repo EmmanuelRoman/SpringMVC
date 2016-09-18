@@ -13,7 +13,5 @@
 		<li><a href="<c:url value='/about'/>">Acerca de... </a></li>
 		<li><a href="<c:url value='/admin'/>">Página Administrador </a></li>
 	</ul>
-	<br>
-	<c:out value="${adminForm}" />
 </body>
 </html>
