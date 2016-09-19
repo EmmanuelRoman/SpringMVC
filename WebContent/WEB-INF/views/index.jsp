@@ -11,7 +11,8 @@
 	<h1>Página de Inicio</h1>
 	<ul>
 		<li><a href="<c:url value='/about'/>">Acerca de... </a></li>
-		<li><a href="<c:url value='/admin'/>">Página Administrador </a></li>
+		<li><a href="<c:url value='/admin'/>"> Gestión de
+				Administradores </a></li>
 	</ul>
 </body>
 </html>

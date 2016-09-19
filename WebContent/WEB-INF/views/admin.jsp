@@ -9,9 +9,16 @@
 <title>Página del Administrador</title>
 <script type="text/javascript"
 	src='<c:url value="/res/js/jquery-3.1.0.min.js"/>'></script>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery(".confirm").on("click", function() {
+			return confirm("Si eliminas el elemento seleccionado no podrá recuperarse. ¿Continuar?");
+		});
+	});
+</script>
 </head>
 <body>
-	<h1>admin.jsp</h1>
+	<h1>Gestión de Administradores</h1>
 	<form:form commandName="admin" method="post"
 		action="${pageContext.request.contextPath}/admin/save">
 		<c:if test="${admin.id ne 0}">
@@ -48,6 +55,8 @@
 				<td><c:out value="${admin.cargo}" /></td>
 				<td><c:out value="${admin.fechaCreacion}" /></td>
 				<td><a href='<c:url value="/admin/${admin.id}/update"/>'>Actualizar</a></td>
+				<td><a class="confirm"
+					href='<c:url value="/admin/${admin.id}/delete"/>'>Eliminar</a></td>
 			</tr>
 		</c:forEach>
 	</table>

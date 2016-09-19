@@ -46,4 +46,14 @@ public class AdminController {
 		model.addAttribute("admin", admin);
 		return "admin";
 	}
+
+	@RequestMapping(value = "/admin/{id}/delete")
+	public String deleteAdmin(@PathVariable("id") int id, RedirectAttributes redirect) {
+		if (adminService.delete(id)) {
+			redirect.addFlashAttribute("resultado", "Registro eliminado correctamente.");
+		} else {
+			redirect.addFlashAttribute("resultado", "Error al eliminar el registro.");
+		}
+		return "redirect:/admin";
+	}
 }
