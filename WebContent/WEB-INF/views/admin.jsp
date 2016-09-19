@@ -12,11 +12,7 @@
 	<h1>admin.jsp</h1>
 	<form:form commandName="admin" method="post"
 		action="${pageContext.request.contextPath}/admin/save">
-		<table>
-			<tr>
-				<td>Estado :</td>
-				<td><input type="text" name="estado"/></td>
-			</tr>
+		<table>			
 			<tr>
 				<td>Nombre :</td>
 				<td><form:input path="nombre" type="text" /></td>

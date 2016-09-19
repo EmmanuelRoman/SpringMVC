@@ -28,7 +28,10 @@
 	</listener>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:com/springmvc/config/persistence-context.xml</param-value>
+		<param-value>
+			classpath:com/springmvc/config/persistence-context.xml
+			classpath:com/springmvc/config/service-context.xml
+		</param-value>
 	</context-param>
 
 	<resource-ref>

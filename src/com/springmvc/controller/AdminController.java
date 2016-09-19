@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.springmvc.pojo.Administrador;
@@ -27,10 +26,12 @@ public class AdminController {
 
 	@RequestMapping(value = "/admin/save", method = RequestMethod.POST)
 	public String handleAdmin(@ModelAttribute("admin") Administrador adminForm, Model model,
-			RedirectAttributes redirect, @RequestParam("estado") String estado) {
-		System.out.println(adminForm);
-		System.out.println("RequestParam := " + estado);
-		redirect.addFlashAttribute("resultado", "Cambios realizados con éxito");
+			RedirectAttributes redirect) {
+		if (adminService.save(adminForm)) {
+			redirect.addFlashAttribute("resultado", "Cambios realizados con éxito");
+		} else {
+			redirect.addFlashAttribute("resultado", "Error al realizar los cambios");
+		}
 		return "redirect:/admin";
 	}
 }
