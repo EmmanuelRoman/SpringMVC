@@ -1,5 +1,7 @@
 package com.springmvc.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +21,9 @@ public class AdminController {
 
 	@RequestMapping(value = "/admin")
 	public String showAdmin(Model model, @ModelAttribute("resultado") String resultado) {
+		List<Administrador> administradores = adminService.findAll();
 		model.addAttribute("admin", new Administrador());
+		model.addAttribute("administradores", administradores);
 		model.addAttribute("resultado", resultado);
 		return "admin";
 	}

@@ -12,7 +12,7 @@
 	<h1>admin.jsp</h1>
 	<form:form commandName="admin" method="post"
 		action="${pageContext.request.contextPath}/admin/save">
-		<table>			
+		<table>
 			<tr>
 				<td>Nombre :</td>
 				<td><form:input path="nombre" type="text" /></td>
@@ -29,5 +29,19 @@
 	</form:form>
 	<br>
 	<c:out value="${resultado}" />
+	<table>
+		<tr>
+			<td>NOMBRE</td>
+			<td>CARGO</td>
+			<td>Fecha de Creación</td>
+		</tr>
+		<c:forEach items="${administradores}" var="admin">			
+			<tr>
+				<td><c:out value="${admin.nombre}" /></td>
+				<td><c:out value="${admin.cargo}" /></td>
+				<td><c:out value="${admin.fechaCreacion}" /></td>
+			</tr>
+		</c:forEach>
+	</table>
 </body>
 </html>
