@@ -12,8 +12,10 @@
 	<h1>admin.jsp</h1>
 	<form:form commandName="admin" method="post"
 		action="${pageContext.request.contextPath}/admin/save">
-		<form:input path="id" type="hidden" />
-		<form:input path="fechaCreacion" type="hidden" />
+		<c:if test="${admin.id ne 0}">
+			<form:input path="id" type="hidden" />
+			<form:input path="fechaCreacion" type="hidden" />
+		</c:if>
 		<table>
 			<tr>
 				<td>Nombre :</td>

@@ -25,7 +25,16 @@ public class AdminService {
 		return adminDao.findAll();
 	}
 
-	public Administrador findById(int id) { 
+	public Administrador findById(int id) {
 		return adminDao.findById(id);
+	}
+
+	public boolean saveOrUpdate(Administrador admin) {
+		if (admin.getId() == 0) {
+			admin.setFechaCreacion(new Timestamp(new Date().getTime()));
+			return adminDao.save(admin);
+		} else {
+			return adminDao.update(admin);
+		}
 	}
 }

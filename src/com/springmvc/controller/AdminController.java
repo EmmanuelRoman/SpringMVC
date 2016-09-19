@@ -32,7 +32,7 @@ public class AdminController {
 	@RequestMapping(value = "/admin/save", method = RequestMethod.POST)
 	public String handleAdmin(@ModelAttribute("admin") Administrador adminForm, Model model,
 			RedirectAttributes redirect) {
-		if (adminService.save(adminForm)) {
+		if (adminService.saveOrUpdate(adminForm)) {
 			redirect.addFlashAttribute("resultado", "Cambios realizados con éxito");
 		} else {
 			redirect.addFlashAttribute("resultado", "Error al realizar los cambios");
