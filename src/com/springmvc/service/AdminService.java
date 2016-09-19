@@ -24,4 +24,8 @@ public class AdminService {
 	public List<Administrador> findAll() {
 		return adminDao.findAll();
 	}
+
+	public Administrador findById(int id) { 
+		return adminDao.findById(id);
+	}
 }

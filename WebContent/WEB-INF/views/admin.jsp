@@ -12,6 +12,8 @@
 	<h1>admin.jsp</h1>
 	<form:form commandName="admin" method="post"
 		action="${pageContext.request.contextPath}/admin/save">
+		<form:input path="id" type="hidden" />
+		<form:input path="fechaCreacion" type="hidden" />
 		<table>
 			<tr>
 				<td>Nombre :</td>
@@ -34,12 +36,14 @@
 			<td>NOMBRE</td>
 			<td>CARGO</td>
 			<td>Fecha de Creación</td>
+			<td>Acciones</td>
 		</tr>
-		<c:forEach items="${administradores}" var="admin">			
+		<c:forEach items="${administradores}" var="admin">
 			<tr>
 				<td><c:out value="${admin.nombre}" /></td>
 				<td><c:out value="${admin.cargo}" /></td>
 				<td><c:out value="${admin.fechaCreacion}" /></td>
+				<td><a href='<c:url value="/admin/${admin.id}/update"/>'>Actualizar</a></td>
 			</tr>
 		</c:forEach>
 	</table>
