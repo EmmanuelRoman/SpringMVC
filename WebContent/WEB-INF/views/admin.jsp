@@ -7,6 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Página del Administrador</title>
+<script type="text/javascript"
+	src='<c:url value="/res/js/jquery-3.1.0.min.js"/>'></script>
 </head>
 <body>
 	<h1>admin.jsp</h1>
